@@ -8,6 +8,12 @@ sub ShowVideoScreen(rowContent as Object, selectedItem as Integer, isSeries = fa
     ' we can't set index of content which should start firstly in playlist mode.
     ' for cases when user select second, third etc. item in the row we use the following workaround
     if selectedItem <> 0 ' check if user select any but first item of the row
+    
+      pitbull_red = "#ff0000"
+
+  videoPlayer.retrievingBar.filledBarBlendColor = pitbull_red
+  videoPlayer.bufferingBar.filledBarBlendColor = pitbull_red
+  videoPlayer.trickPlayBar.filledBarBlendColor = pitbull_red
         childrenClone = CloneChildren(rowContent, selectedItem)
         ' create new parent node for our cloned items
         rowNode = CreateObject("roSGNode", "ContentNode")
