@@ -1,0 +1,4 @@
+% export ROKU_DEV_TARGET=192.168.1.140
+% export DEVPASSWORD=1234
+% cd <sdk>/examples/source/videoplayer   
+% make install
